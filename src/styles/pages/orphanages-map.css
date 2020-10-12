@@ -42,6 +42,7 @@
 }
 
 #page-map .create-orphanage {
+  z-index: 10;
   position: absolute;
   right: 40px;
   bottom: 40px;
@@ -60,4 +61,8 @@
 
 #page-map .create-orphanage:hover {
   background: #17d6eb;
+}
+
+#page-map .leaflet-container {
+  z-index: 5;
 }
