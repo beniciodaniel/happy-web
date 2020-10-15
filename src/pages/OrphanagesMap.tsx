@@ -26,8 +26,6 @@ function OrphanagesMap() {
     });
   }, []);
 
-  console.log(orphanages);
-
   return (
     <div id="page-map">
       <aside>
