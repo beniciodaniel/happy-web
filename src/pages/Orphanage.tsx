@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from "react";
-import { FaWhatsapp } from "react-icons/fa";
-import { FiClock, FiInfo } from "react-icons/fi";
-import { Map, Marker, TileLayer } from "react-leaflet";
-import { useParams } from "react-router-dom";
+import React, { useEffect, useState } from 'react';
+// import { FaWhatsapp } from "react-icons/fa";
+import { FiClock, FiInfo } from 'react-icons/fi';
+import { Map, Marker, TileLayer } from 'react-leaflet';
+import { useParams } from 'react-router-dom';
 
-import Sidebar from "../components/Sidebar";
-import happyMapIcon from "../utils/mapIcon";
-import api from "../services/api";
+import Sidebar from '../components/Sidebar';
+import happyMapIcon from '../utils/mapIcon';
+import api from '../services/api';
 
-import "../styles/pages/orphanage.css";
+import '../styles/pages/orphanage.css';
 
 interface Orphanage {
   name: string;
@@ -56,7 +56,7 @@ export default function Orphanage() {
             {orphanage.images.map((image, index) => (
               <button
                 key={image.id}
-                className={activeImageIndex === index ? "active" : ""}
+                className={activeImageIndex === index ? 'active' : ''}
                 type="button"
                 onClick={() => setActiveImageIndex(index)}
               >
@@ -73,7 +73,7 @@ export default function Orphanage() {
               <Map
                 center={[orphanage.latitude, orphanage.longitude]}
                 zoom={16}
-                style={{ width: "100%", height: 280 }}
+                style={{ width: '100%', height: 280 }}
                 dragging={false}
                 touchZoom={false}
                 zoomControl={false}
